@@ -1,0 +1,20 @@
+@charset "ISO-8859-1";
+
+.navbar-brand{
+	
+	padding-top: 12px;
+	padding-bottom: 12px;
+	background-color: #3E803D;
+}
+
+.panel-tittle{
+	font-size: 25px;
+	padding-left: 15px;
+	font-weight: bold;
+	color: #3E803D;
+}
+
+.panel-body{
+	font-size: 15px;
+	color: #198017;
+}

@@ -10,8 +10,6 @@
 .form-horizontal{
 	padding-left: 15px;
 	padding-top: 15px;
-
-	
 }
 
 
@@ -19,17 +17,22 @@
 	font-size: 25px;
 	padding-left: 15px;
 	font-weight: bold;
-	
-	
 }
 
 .panel-body{
 	font-size: 15px;
 	color: #AC00FE;
-	
 }
 
 .alert{
 	margin-left: 10px;
 	margin-right: 10px;
 }
+
+.table{
+  margin-right: 10px;
+  margin-left: 20px;
+  width: 98%;
+  table-layout: auto;
+}
+

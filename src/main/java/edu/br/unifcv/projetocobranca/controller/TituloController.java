@@ -1,7 +1,6 @@
 package edu.br.unifcv.projetocobranca.controller;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,7 +27,7 @@ public class TituloController {
 	public ModelAndView salvar(Titulo titulo) {
 		ModelAndView mv = new ModelAndView("CadastroTitulo");
 		
-		if (titulo.getDescricao().length() <= 5) {
+		if (titulo.getDescricao().length() <= 5) { 
 			mv.addObject("warning", true);
 			return mv;
 		}
@@ -47,8 +46,11 @@ public class TituloController {
 	}
 	
 	@RequestMapping
-	public String pesquisar() {
-		return "PesquisaTitulos";
+	public ModelAndView pesquisar() {
+		List <Titulo> todosTitulos = titulos.findAll();
+		ModelAndView mv = new ModelAndView("PesquisaTitulos");
+		mv.addObject("titulos", todosTitulos);
+		return mv;
 	}
 	
 

@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 import java.math.BigDecimal;
 
@@ -21,8 +23,9 @@ public class Titulo {
 	
 	private String descricao;
 	
-	//@Temporal(TemporalType.DATE)
-	private String dataVencimento;
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
+	@Temporal(TemporalType.DATE)
+	private Date dataVencimento;
 	
 	private BigDecimal valor;
 	
@@ -42,10 +45,10 @@ public class Titulo {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public String getDataVencimento() {
+	public Date getDataVencimento() {
 		return dataVencimento;
 	}
-	public void setDataVencimento(String dataVencimento) {
+	public void setDataVencimento(Date dataVencimento) {
 		this.dataVencimento = dataVencimento;
 	}
 	public BigDecimal getValor() {
@@ -60,6 +63,12 @@ public class Titulo {
 	public void setStatus(StatusTitulo status) {
 		this.status = status;
 	}
+		
+	public boolean isPendente() {
+		return StatusTitulo.PENDENTE.equals(this.status);
+	}
+		
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

@@ -12,11 +12,24 @@
 	padding-top: 15px;
 }
 
+.link-panel{
+	float: right;
+	padding-right: 10px;
+	margin: 10px;
+}
+
+.titulo-panel{
+	float: left;
+	font-size: 20px;
+	margin: 10px;
+	
+}
 
 .panel-title{
-	font-size: 25px;
+	font-size: 20px;
 	padding-left: 15px;
 	font-weight: bold;
+	
 }
 
 .panel-body{
